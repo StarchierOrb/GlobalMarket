@@ -1,6 +1,6 @@
 {
 "locale": {
-    "menu_listings_title": "                         &2&l交易所",
+    "menu_listings_title": "                     &2&l全球市场",
     "menu_listings_action_buy": "&e&o<单击购买>&r",
     "menu_listings_action_buy_confirm": "&e<再次单击确认购买>&r",
     "menu_listings_seller": "&7销售者: %s&r",
