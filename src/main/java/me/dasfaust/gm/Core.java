@@ -209,14 +209,14 @@ public class Core extends JavaPlugin
 
 	private static boolean isCauldron()
 	{
-		try
+		/*try
 		{
 			Class.forName("net.minecraftforge.common.ForgeHooks");
 		}
 		catch(Exception ignored)
 		{
 			return false;
-		}
-		return true;
+		}*/
+		return false;
 	}
 }

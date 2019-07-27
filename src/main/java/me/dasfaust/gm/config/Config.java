@@ -52,7 +52,7 @@ public class Config
             "Will log names of potential players with autoclickers. (Default: true)"
         });
     	
-        public static final ConfigDefault<String> LOCALE_FILENAME = new ConfigDefault<String>("locale_file", "en_US", new String[] {
+        public static final ConfigDefault<String> LOCALE_FILENAME = new ConfigDefault<String>("locale_file", "zh_CN", new String[] {
             "Which locale file to use. Do not include .json! (Default: en_US)",
             "Locale files can be found and edited to your liking inside the plugin JAR.",
             "Be sure to migrate your edits when updating the plugin."
@@ -231,9 +231,10 @@ public class Config
             }
             else
             {
-                Object nms = cpw.mods.fml.common.registry.GameRegistry.findItemStack(id[0], id[1], 1);
+               /* Object nms = cpw.mods.fml.common.registry.GameRegistry.findItemStack(id[0], id[1], 1);
                 ItemStack itemStack = MinecraftReflection.getBukkitItemStack(nms);
-                stack = new WrappedStack(itemStack).setDamage(Integer.parseInt(id[2]));
+                stack = new WrappedStack(itemStack).setDamage(Integer.parseInt(id[2]));*/
+                stack = new WrappedStack(new ItemStack(Material.getMaterial(id[0]))).setDamage(Integer.parseInt(id[1]));
             }
             functionItems.put(key.replace("menu_function_items.", ""), stack);
             GMLogger.debug(String.format("Function ItemStack built: %s:%s", key, stack.getMaterial().toString()));
